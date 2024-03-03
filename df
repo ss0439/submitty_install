@@ -1,0 +1,36 @@
+[33mcommit 36c2b50fdf6fe9378a487dc8c7eb14d132277d3c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Merge: 84d346d 0704798
+Author: ss0439 <ss0439@uowmail.edu.au>
+Date:   Fri Feb 16 10:38:39 2024 +1100
+
+    fixed conflict
+
+[33mcommit 070479886628e0be5884c39d940ae04d74cfab9c[m
+Author: ss0439 <159899334+ss0439@users.noreply.github.com>
+Date:   Fri Feb 16 10:32:33 2024 +1100
+
+    h1 style blue
+
+[33mcommit 84d346dfa11f8cab31bceda7b2008bb933bec4b1[m
+Author: ss0439 <ss0439@uowmail.edu.au>
+Date:   Fri Feb 16 10:29:33 2024 +1100
+
+    added second exclamation mark end git
+
+[33mcommit 54d5003f98cd3f8f8c7991ca31163cc97e5d18dc[m
+Author: ss0439 <159899334+ss0439@users.noreply.github.com>
+Date:   Fri Feb 16 10:24:41 2024 +1100
+
+    added h2
+
+[33mcommit 723c18998a20e803acf0343a21d521b177e10707[m
+Author: ss0439 <ss0439@uowmail.edu.au>
+Date:   Fri Feb 16 10:08:53 2024 +1100
+
+    commmit message
+
+[33mcommit 24337d5c1615fe341340fa43972ed016cc02c8c9[m
+Author: ss0439 <ss0439@uowmail.edu.au>
+Date:   Tue Feb 13 23:39:47 2024 +1100
+
+    Create file hello.html
