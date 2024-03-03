@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Assessment 4</title>
+    <style>
+/*Question 1*/ 
+        /* Shared styles for headings */
+        .heading {
+        text-align: center;
+        background-color: aqua;
+        border-style: dashed;
+        border-color: brown;
+        margin: 0; /* Remove default spacing */
+        }
+
+        /* H1 specific styles */
+        .h1-custom {
+        font-size: 3em;
+        border-bottom: 0; /* No bottom border */
+        color: blue; /* Maintain individual font color */
+        }
+
+        /* H2 specific styles */
+        .h2-custom {
+        font-size: 2em;
+        border-top: 0; /* No top border */
+        border-bottom: 0; /* No bottom border */
+        color: rgb(0, 0, 138); /* Maintain individual font color */
+        }
+
+        /* H3 specific styles */
+        .h3-custom {
+        font-size: 1em;
+        border-top: 0; /* No top border */
+        color: rgb(75, 1, 1); /* Maintain individual font color */
+        }
+/*End Question 1*/
+
+/*Question 2*/
+        .headerRow {
+        background-color: black; /* Black background */
+        color: white;            /* White font color */
+        text-align: left;          /*left align text */
+        }
+        /* Base style for table cells */
+        td,
+        th {
+        padding: 10px;
+        border: 1px dotted grey; /* Dotted border */
+        font-family: Verdana; /* Verdana font for all cells */
+        word-wrap: break-word; /* Enable word wrap for all cells */
+        font-size: small;
+        }
+
+        /* Style for odd rows */
+        .oddRow {
+        background-color: white; /* White background for odd rows */
+        color: grey;
+        }
+
+        /* Style for even rows */
+        .evenRow {
+        background-color: lightseagreen; /* light sea green background for even rows */
+        }
+              
+        table {
+        margin: 0 auto;
+        }
+
+        #keyDates {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto; /* Center the table within its container */
+        }
+/*End Question 2*/
+/*Question 3*/
+        #Task3 {
+        border-collapse: collapse;
+        width: 80%;
+        margin: 20px auto;
+        border: 2px solid darkblue;
+        padding: 15px;
+        font-family: Arial, sans-serif;
+        }
+
+        th {
+            padding: 10px;
+            border: 1px solid darkblue;
+            text-align: center;
+            background-color: darkblue;
+            color: yellow;
+            font-family: 'Times New Roman', serif; /* Font for headers */
+            font-size: 1.1em;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid darkblue;
+            text-align: left;
+        }
+        
+        td img {
+            width: 250px;
+            height: auto;
+            margin-bottom: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        tr:nth-child(even) {
+            background-color: lightgray;            
+        }
+
+        .Name { 
+            font-size: smaller; font-weight: bold; 
+        }        
+/*End Question 3*/
+/* Question 4 */
+.bold-text {
+        font-weight: bold;
+        }
+        .image-container {
+        width: 250px; /* Adjust width as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 5px;
+        display: block;
+        float: left;
+        margin-right: 10px;
+        }
+/* End Question 4 */
+    </style>
+
+</head>
+<!-- Question 4 -->
+<script>
+    function updateMessage(button) {
+        const messageField = document.getElementById("messageField");
+        const buttonText = button.textContent.trim(); // Get the button text
+        messageField.value = `User clicks ${buttonText}`;
+        const buttonTextSpan = document.getElementById("buttonTextSpan");  // Select the span
+        buttonTextSpan.textContent = `${buttonText} is clicked`;
+
+        const imageTitles = {
+            Cat: "Source: https://contentcatnip.com/2022/10/19/comforting-thought-a-cat-represents-our-shared-humanity-during-the-worst-of-times",
+            Dog: "Source: https://www.peakpx.com/en/hd-wallpaper-desktop-fmqgi#google_vignette",
+            Frog: "Source: https://www.craiyon.com/image/0fQFwpfISH2060E2FmSxtQ"
+        };
+
+        if (buttonText === "Cat") {
+            selectedImage.src = "Cat.jpg";
+            selectedImage.style.display = "block"; // Set the image title
+            selectedImage.title = imageTitles.Cat;
+           
+        } else if (buttonText === "Dog") {
+            selectedImage.src = "Dog.jpg";
+            selectedImage.style.display = "block";
+            selectedImage.title = imageTitles.Dog; // Set the image title
+            
+        } else if (buttonText === "Frog") {
+            selectedImage.src = "Frog.webp";
+            selectedImage.style.display = "block";
+            selectedImage.title = imageTitles.Frog; // Set the image title
+            
+        }
+    }
+    function highlightButton(clickedButton) {
+        const allButtons = document.querySelectorAll("button");
+        allButtons.forEach(button => button.style.backgroundColor = ""); // Clear background colors for all buttons
+        clickedButton.style.backgroundColor = "yellow";                  // Highlight the clicked button 
+            
+  }
+</script>
+<!-- End Question 4 -->
+<body>
+  <p id="headingPara">
+    <h1 class="heading h1-custom">7798428 Surendra Sundram</h1>
+    <h2 class="heading h2-custom">COMP804 Web Security</h2>
+    <h3 class="heading h3-custom">Assignment 3, due 4th March 2024</h3>
+  </p>
+<!-- End Question 1 -->
+<!-- Question 2 -->
+    <table id="keyDates">
+    <tr>
+        <th class="headerRow">
+            Activity
+        </th>
+        <th class="headerRow">
+            Date
+        </th>
+    </tr>
+
+    <tr class="oddRow">
+        <td>
+            First day to enrol for re-enrolling (continuing) students
+        </td>
+        <td>
+            21 Nov 2022
+        </td>
+    <tr class="evenRow">
+        <td>
+            Orientation
+        </td>
+        <td>
+            18 Jul 2023
+        </td>
+    </tr>
+    <tr class="oddRow">
+        <td>
+            Lectures Commence (weeks 1-9)
+        </td>
+        <td>
+            24 July - 22 Sep 2023
+        </td>
+    <tr class="evenRow">
+        <td>
+            Last day to enrol / add subjects yourself
+        </td>
+        <td>
+            04 Aug 2023
+        </td>
+    </tr>    
+    <tr class="oddRow">
+        <td>
+            Last day to enrol / add subjects with Head of Students approval
+        </td>
+        <td>
+            11 Aug 2023
+        </td>
+    <tr class="evenRow">
+        <td>
+            <b>CENSUS DATE</b>
+            <li>Fees Due</li>
+            <li>Last day to withdraw from subject/s without paying for them</li>
+            <li>HECS / FEE HELP debt reporting date</li>
+            <li>Last day to change HECS / FEE HELP billing option</li>
+            <br>
+            <a href="https://uowedu.service-now.com/kb?id=kb_article_view&sysparm_article=KB0012659">Learn more about Census date > </a> 
+        </td>
+        <td>
+            31 Aug 2023
+        </td>
+    </tr>
+    <tr class="oddRow">
+        <td>
+          Student Services and Amenities Fees Due
+        </td>
+        <td>
+            01 Sep 2023
+        </td>
+    </table>
+<!-- End Question 2 -->
+<!-- Question 3 -->	
+    <table id="Task3">
+        <tr>
+            <th>Name</th>
+            <th>Web Attacks</th>
+        </tr>
+        <tr>
+            <td class="Name">
+                SQL Injection
+                <br>
+                <br>
+                <img src="SQL Injection.webp" alt="SQL Injection">
+                <br>
+                Source: https://testmatick.com/what-are-sql-injections-and-how-to-test-them/
+            </td>
+            <td class="webAttack">
+                SQL Injection attacks trick the server into executing malicious SQL statements that can steal sensitive data, modify data, or disrupt operations.
+                <br>
+                Learn more: <a href="https://owasp.org/www-community/attacks/SQL_Injection">OWASP SQL Injection</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="Name">
+                Cross-Site Scripting (XSS)
+                <br>
+                <br>
+                <img src="xss.png" alt="Cross-Site Scripting">
+                <br>
+                Source: https://www.linkedin.com/pulse/cross-site-scripting-xss-kamal-suryawanshi
+            </td>
+            <td>
+                XSS attacks inject malicious scripts into web pages, which can steal user data, redirect users to phishing sites, or deface websites.
+                <br>
+                Learn more: <a href="https://owasp.org/www-community/attacks/xss/">OWASP XSS Tutorial</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="Name">
+                Cross-Site Request Forgery (CSRF)
+                <br>
+                <br>
+                <img src="csrf.png" alt="Cross-Site Request Forgery">
+                <br>
+                Source: https://securitysouls.com/a-tale-of-cross-site-request-forgery-csrf
+            </td>
+            <td>
+                CSRF attacks trick a user's browser into performing unauthorized actions on a trusted website.
+                <br>
+                Learn more: <a href="https://portswigger.net/web-security/csrf">PortSwigger CSRF Guide</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="Name">
+                Phishing
+                <br>
+                <br>
+                <img src="Phishing.webp" alt="Phishing">
+                <br>
+                Source: https://www.malwarebytes.com/blog/news/2018/09/6-sure-signs-someone-is-phishing-you-besides-email
+            </td>
+            <td>
+                Phishing attacks attempt to trick users into revealing personal information or clicking on malicious links through deceptive emails or messages.
+                <br>
+                Learn more: <a href="https://www.cisa.gov/news-events/news/phishing-whats-name">CISA Phishing Information</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="Name">
+                Denial-of-Service
+                <br>
+                <br>
+                <img src="DenialofService.png" alt="Denial-of-Service">
+                <br>
+                Source: https://www.researchgate.net/figure/Denial-of-Service-DoS-attack-A-DDoS-Distributed-Denial-of-Service-attack-as-shown-in_fig2_325779181
+            </td>
+            <td>
+                DoS attacks overwhelm a website or server with traffic, making it unavailable to legitimate users.
+                <br>
+                Learn more: <a href="https://www.cloudflare.com/learning/ddos/glossary/denial-of-service">Cloudflare DoS Attack Guide</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="Name">
+                Man-in-the-Middle (MitM) Attack
+                <br>
+                <br>
+                <img src="MITM.webp" alt="Man-in-the-Middle">
+                <br>
+                Source: https://www.malwarebytes.com/blog/news/2018/07/when-three-isnt-a-crowd-man-in-the-middle-mitm-attacks-explained
+            </td>
+            <td>
+                MitM attacks intercept communication between two parties, allowing attackers to steal data, eavesdrop on conversations, or manipulate traffic. This can happen on unsecured Wi-Fi networks or through compromised systems.
+                <br>
+                Learn more: <a href="https://www.techtarget.com/iotagenda/definition/man-in-the-middle-attack-MitM">Tech Target</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="Name">
+                Password Attacks
+                <br>
+                <br>
+                <img src="PASSWORDATTACK.png" alt="Password Attacks">
+                <br>
+                Source: https://captex.bank/cybersecurity/password-attacks/
+            </td>
+            <td>
+                Password attacks aim to guess or crack a user's password to gain unauthorized access to accounts. This can involve techniques like brute-force attacks (systematically trying different combinations), dictionary attacks (using common words and phrases), or social engineering to trick users into revealing their passwords.
+                <br>
+                Learn more: <a href="https://www.educative.io/answers/what-is-a-password-attack">Educative.IO</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="Name">
+                Malware
+                <br>
+                <br>
+                <img src="Malware.jpg" alt="Malware">
+                <br>
+                Source: https://www.kaspersky.com/resource-center/preemptive-safety/what-is-malware-and-how-to-protect-against-it
+            </td>
+            <td>
+                Malware is malicious software that can infect devices and steal data, disrupt operations, or install additional harmful software. Malware can be disguised as legitimate applications or spread through phishing emails, malicious websites, or infected downloads.
+                <br>
+                Learn more: <a href="https://www.cyber.gov.au/threats/types-threats/malware">Australian Signals Directorate</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="Name">
+                Zero-Day Exploit
+                <br>
+                <br>
+                <img src="zeroday.webp" alt="Zero-Day Exploit">
+                <br>
+                Source: https://www.darkreading.com/threat-intelligence/zero-day-exploit-use-exploded-in-2021
+            </td>
+            <td>
+                Zero-day exploits target vulnerabilities in software that are unknown to the vendor and for which no patch is yet available. These attacks are particularly dangerous because they can be highly successful before a fix is developed.
+                <br>
+                Learn more: <a href="https://www.ibm.com/topics/zero-day">IBM</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="Name">
+                Supply Chain Attacks
+                <br>
+                <br>
+                <img src="supplychain.png" alt="Supply Chain Attacks">
+                <br>
+                Source: https://www.wallarm.com/what/what-is-a-supply-chain-attack
+            </td>
+            <td>
+                Supply chain attacks target vulnerabilities in software development processes to inject malicious code into legitimate software. This can compromise a wide range of systems that rely on the affected software
+                <br>
+                Learn more: <a href="https://www.crowdstrike.com/cybersecurity-101/cyberattacks/supply-chain-attacks/">Crowdstrike</a>
+            </td>
+        </tr>
+    </table>
+<!-- End Question 3 -->
+<!-- Question 4 -->
+    <button onclick="updateMessage(this);highlightButton(this)">Cat</button>
+    <button onclick="updateMessage(this);highlightButton(this)">Dog</button>
+    <button onclick="updateMessage(this);highlightButton(this)">Frog</button>
+    <br>
+    <br>
+    <input type="text" id="messageField" disabled>
+    <br>
+    <br>
+    <span id="buttonTextSpan" class="bold-text"></span>
+    <br>
+    <br>
+    <img id="selectedImage" style="display: none;" class="image-container">
+    
+<!-- End Question 4 -->	
+</body>
+
+</html>
